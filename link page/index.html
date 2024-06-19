@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: "Ubuntu",sans-serif;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        .main-container{
+            display: flex;
+            justify-content: center;
+        }
+        .main,.about-modal{
+            padding:2rem 1rem 2rem 1rem;
+            height:auto;
+            background-color: rgba(74, 78, 105, 0.3);
+            display:flex;
+            justify-content: center;
+            margin-top:12%;
+            border-radius: 2rem;
+            flex-direction: column;
+            gap:1rem;
+            opacity: 1;
+            transition:all 400ms;
+            max-width: 22rem;
+        }
+        .about-modal{
+            color:#F2E9E4;
+            justify-content:space-around;
+        }
+        .sub{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            /* justify-content: space-around; */
+            gap:2rem;
+            color:#F2E9E4;
+        }
+        button{
+            border-radius:1000px;
+            padding:1.6rem;
+            width: 20rem;
+            height:5rem;
+            border: none;
+            background-color: #C9ADA7;
+            font-size:2rem;
+            transition:all 500ms;
+
+            /* color: */
+        }
+        button:hover{
+            background-color: #b59c96;
+        }
+        canvas{
+            width: 100%;
+            height: 100%;
+             position: fixed;
+             z-index: -1;
+        }
+        img{
+            height:5rem;
+            width:5rem;
+            border-radius:20%
+        }
+        .hidden{
+            visibility: hidden;
+            opacity: 0;
+            transition:all 400ms;
+        }
+        a{
+            text-decoration: none;
+        }
+        .h2{
+            color:#ecf8f8
+        }
+    </style>
+</head>
+<body>
+<div class="main-container">
+        <canvas></canvas>
+    <div class="main">
+        <div class="sub">
+            <img src="pfp.png">
+            <h2>Crimson / Maddie</h2>
+        </div>
+        <button class="about">About</button>
+        <a href="https://github.com/crimsonware-design"><button>Github</button></a>
+        <a href="https://en.pronouns.page/@crimsonware"><button>Pronouns</button></a>
+        <a href="https://steamcommunity.com/id/crimsonthetiger/"><button>Steam</button></a>
+    </div>
+    <div class="about-modal hidden">
+        <h1>Hello, I'm a Web Developer and Designer with a surplus of random skills and projects. (hold Mousedown on the background)
+        <h2 class="h2">Discord: @crimsonware. </h2>
+    </div>
+    <script src="script.js"></script>
+    <script src="canvas.js"></script>  
+</div>
+</body>
+</html>
